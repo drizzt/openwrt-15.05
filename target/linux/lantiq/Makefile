@@ -14,7 +14,7 @@ MAINTAINER:=John Crispin <blogic@openwrt.org>
 
 KERNEL_PATCHVER:=3.18
 
-CPU_TYPE:=mips32r2
+CPU_TYPE:=34kc
 
 define Target/Description
 	Build firmware images for Lantiq SoC
