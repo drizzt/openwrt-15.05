@@ -1,0 +1,15 @@
+#!/bin/sh /etc/rc.common
+
+. /lib/functions.sh
+
+START=93
+
+start ()
+{
+	/usr/bin/vlmcsd -u nobody -g nogroup
+}
+
+stop ()
+{
+	killall vlmcsd
+}
