@@ -1,0 +1,12 @@
+--- a/src/common/drv_dsl_cpe_api.c
++++ b/src/common/drv_dsl_cpe_api.c
+@@ -1165,6 +1165,9 @@ DSL_Error_t DSL_DRV_Init(
+    /* Enhanced upstream framing shall be enabled by default */
+    pContext->lineOptionsConfig[DSL_ENHANCED_FRAMING_US] = (DSL_int32_t)DSL_TRUE;
+ 
++   /* Change SNR margin => -2.0dBm */
++   pContext->lineOptionsConfig[DSL_OPT_NOISE_MARGIN_DELTA_DS] = -20;
++
+ #ifdef INCLUDE_DSL_CPE_API_VRX
+    /* Set initialization default power mode*/
+    pContext->PMMode = DSL_G997_PMMODE_BIT_L3_STATE;
