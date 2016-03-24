@@ -1,0 +1,12 @@
+--- a/src/common/drv_dsl_cpe_api.c
++++ b/src/common/drv_dsl_cpe_api.c
+@@ -1143,8 +1143,7 @@ DSL_Error_t DSL_DRV_Init(
+    pContext->lineFeatureDataCfg[DSL_UPSTREAM].bBitswapEnable = DSL_TRUE;
+    pContext->lineFeatureDataCfg[DSL_DOWNSTREAM].bBitswapEnable = DSL_TRUE;
+ 
+-   /* ReTx is only valid for downstream direction */
+-   pContext->lineFeatureDataCfg[DSL_UPSTREAM].bReTxEnable = DSL_FALSE;
++   pContext->lineFeatureDataCfg[DSL_UPSTREAM].bReTxEnable = DSL_TRUE;
+    pContext->lineFeatureDataCfg[DSL_DOWNSTREAM].bReTxEnable = DSL_TRUE;
+ 
+ #ifdef INCLUDE_DSL_CPE_API_VRX
